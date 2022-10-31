@@ -1,7 +1,15 @@
 <?php
 // $root = getcwd().'/';
 $root = $_SERVER['DOCUMENT_ROOT'];
-$appdata = getAppData();;
+$appdata = getAppData();
+
+function db_connect($obj){
+    if (!mysqli_connect($obj["host"], $obj["user"], $obj["pass"], $obj["db"])) {
+        return false;
+    } else {
+        return true;
+    }
+}
 
 function getAppData(){
     return array(
@@ -14,7 +22,7 @@ function AppPaths($root){
     return array(
         'app' => [$root.'App/Controller/',$root.'App/Models/',$root.'App/Views/'],
         'src' =>[$root.'public/style/',$root.'public/js/',$root.'public/img/'],$root.'/public/video',
-        'inc' =>[$root.'includes/accounts/',$root.'includes/dashboard/',$root.'includes/web/'],
+        'inc' =>[$root.'includes/accounts/',$root.'includes/toolkit/',$root.'includes/web/'],
         'cls' =>[$root.'classes/accounts/',$root.'classes/dashboard/',$root.'classes/web/']
     );
 }

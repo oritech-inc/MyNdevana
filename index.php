@@ -3,6 +3,13 @@
     require_once'includes/srv.php';
     $link = 'homepage';
 
+    $con = db_connect([
+        'host' =>'localhost',
+        'db'=>'ndv_db',
+        'user'=>'root',
+        'pass'=>''
+    ]);
+
     if(empty(isset($_SESSION))){
         $link = 'dashboard';
         mkeUserSession('client');

@@ -11,7 +11,7 @@
     font-family: Roboto, sans-serif;
     letter-spacing: 0.2em;
     font-size: 11px;
-
+}
     span {
         display: block;
     }
@@ -27,7 +27,7 @@
         stroke-miterlimit: 10;
         stroke-width: 1;
     }
-}
+
 
 @keyframes scroll {
     0% {

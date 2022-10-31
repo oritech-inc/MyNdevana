@@ -1,10 +1,18 @@
 <?php
 
 ?>
-<main id="app">
+<main id="app"  >
     <!-- Top -->
-    <?php print_r($_SESSION); require $app[2].'web/header/top.php';?>
+    <?php
+        require $app[2].'web/header/top.php';
+    ?>
 
     <!-- Content -->
+    <div>
+        <?php
+            require $app[2].'web/about/about.php';
+            require $app[2].'web/council/council.php';
+        ?>
+    </div>
     <!-- Footer -->
 </main>
