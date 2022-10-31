@@ -34,7 +34,7 @@
     <style type="text/css">
         body {
             overflow-y: scroll;
-        overflow-x: hidden;
+            overflow-x: hidden;
         }
     </style>
 </head>
